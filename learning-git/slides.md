@@ -40,6 +40,25 @@ layout: cover
 
 <h1>Git そのものが<br>わからなすぎ問題</h1>
 
+<!--
+多くの人がGitを正しく理解していない
+Gitの引き起こした結果だけを見て経験則で対処している
+
+その状態では、せいぜいGitを使える程度
+Gitを応用した構成管理を理解できないし、考えるなど到底不可能
+
+なので、さっきのタイトルは嘘
+-->
+---
+layout: cover
+class: text-center
+---
+# Git の構成管理
+<div v-click class="text-4xl">
+の前に知っておきたい基礎知識<br />
+〜ブランチ編〜
+</div>
+
 ---
 layout: cover
 class: text-center
@@ -48,11 +67,20 @@ class: text-center
 # Git をちゃんと理解しよう
 
 正しい知識がないと構成管理を考えるのは無理  
-考えたとしてもメンバーが理解してくれなければ意味がない  
+考えたとしてもメンバーが理解してくれなければ意味がない
+
+<div class="mt-8" v-click>
+  <material-symbols-arrow-downward class="text-3xl"/>
+  <p class="text-3xl">ブランチを理解して使いこなせるようになろう</p>
+</div>
 
 ---
 
-# 
+# 今回は Git の仕組みを交えてコミットとブランチについて解説
+
+
+
+---
 
 Use code snippets and get the highlighting directly![^1]
 
