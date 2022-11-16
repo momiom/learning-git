@@ -1,4 +1,6 @@
 .slidev-layout {
+  @apply bg-[#EDF2F6] text-[#181818] dark:(bg-[#121212] text-[#ddd]);
+  
   h1 + p {
     @apply -mt-2 opacity-70 mb-4 text-2xl;
   }
