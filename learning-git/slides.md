@@ -11,15 +11,60 @@ info: |
 
   Learn more at [Sli.dev](https://sli.dev)
 title: Git の構成管理
+drawings: 
+  syncAll: false
 ---
 
 # Git の構成管理
 
 <div class="mt-8 opacity-70 text-2xl">河崎 一希</div>
 
+---
+layout: cover
+---
+# 構成管理とは
+
+<p class="text-center">いつ・誰が・どんなタイミングでリポジトリを更新するのか決めたルール</p>
+
+<div class="grid grid-cols-2 gap-10 pt-4 -mb-6">
+  <div class="flex flex-col">
+    <p class="mb-8">Github Flow</p>
+```mermaid {scale: 0.8, gitGraph: {showCommitLabel: false}}
+  gitGraph
+    commit
+    commit
+    branch feature-x
+    checkout feature-x
+    commit
+    commit
+    checkout main
+    merge feature-x
+    commit
+    commit
+```
+  </div>
+
+  <div class="flex flex-col">
+    <p class="mb-8">Gitlab Flow</p>
+```mermaid {scale: 0.8, gitGraph: {showCommitLabel: false, mainBranchOrder: 2}}
+  gitGraph
+      commit
+      branch feature-x order: 1
+      commit
+      commit
+      checkout main
+      merge feature-x
+      checkout main
+      branch pre-production order: 2
+      commit
+      branch production order: 3
+      commit
+```
+  </div>
+</div>
+
 <!--
-について淡々と紹介すれば楽なのだが。。
-まず皆さん、、{次スライド}
+その前にまず皆さん、、
 -->
 
 ---
@@ -59,28 +104,27 @@ class: text-center
 〜ブランチ編〜
 </div>
 
-<!--
-ローカルリポジトリとリモートリポジトリの話やコマンドの解説もしたいところだが、
-量が多すぎるので今回はブランチをメインに解説
--->
----
-layout: cover
-class: text-center
----
-
-# Git をちゃんと理解しよう
-
-正しい知識がないと構成管理を考えるのは無理  
-考えたとしてもメンバーが理解してくれなければ意味がない
-
 <div class="mt-8" v-click>
   <material-symbols-arrow-downward class="text-3xl"/>
   <p class="text-3xl">ブランチを理解して使いこなせるようになろう</p>
 </div>
 
+<!--
+ローカルリポジトリとリモートリポジトリの話やコマンドの解説もしたいところだが、
+量が多すぎるので今回はブランチをメインに解説
+
+構成管理ということで、GitHub Flow とか GitLab Flow とか有名どころの管理方法を紹介してもよかったのですが、
+Git を経験則だけで使うのはしんどいし
+正しい知識がないと構成管理を考えるのは無理
+
+また、自分が考えることができたとしても、メンバーが理解してくれなければ意味がない
+
+なので今日は
+-->
+
 ---
 
-# 今回は Git の仕組みを交えてコミットとブランチについて解説
+# なぜブランチなのか
 
 
 
