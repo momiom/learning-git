@@ -5,11 +5,6 @@ fonts:
   sans: 'Noto Sans JP'
 highlighter: shiki
 lineNumbers: false
-info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
-
-  Learn more at [Sli.dev](https://sli.dev)
 title: Git の構成管理
 drawings: 
   syncAll: false
