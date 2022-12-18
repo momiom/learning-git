@@ -1,0 +1,14 @@
+version: '3'
+volumes:
+  learngit-node-modules:
+  
+services:
+  app:
+    image: node:latest
+    tty: true
+    restart: always
+    ports:
+      - '3000:3000'
+    volumes:
+      - .:/workspace/learning-git
+      - learngit-node-modules:/workspace/learning-git/node_modules
