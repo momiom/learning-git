@@ -1,6 +1,14 @@
 version: '3'
 volumes:
   learngit-node-modules:
+  slidev-node-modules:
+  slidev-client-node-modules:
+  slidev-create-app-node-modules:
+  slidev-create-theme-node-modules:
+  slidev-parser-node-modules:
+  slidev-slidev-node-modules:
+  slidev-types-node-modules:
+  slidev-pnpm-store:
   
 services:
   app:
@@ -11,4 +19,13 @@ services:
       - '3000:3000'
     volumes:
       - .:/workspace/learning-git
+      - ../../slidev/:/workspace/slidev
       - learngit-node-modules:/workspace/learning-git/node_modules
+      - slidev-node-modules:/workspace/slidev/node_modules
+      - slidev-client-node-modules:/workspace/slidev/packages/client/node_modules
+      - slidev-create-app-node-modules:/workspace/slidev/packages/create-app/node_modules
+      - slidev-create-theme-node-modules:/workspace/slidev/packages/create-theme/node_modules
+      - slidev-parser-node-modules:/workspace/slidev/packages/parser/node_modules
+      - slidev-slidev-node-modules:/workspace/slidev/packages/slidev/node_modules
+      - slidev-types-node-modules:/workspace/slidev/packages/types/node_modules
+      - slidev-pnpm-store:/workspace/slidev/.pnpm-store
