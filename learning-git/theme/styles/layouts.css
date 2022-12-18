@@ -1,12 +1,11 @@
 .slidev-layout {
   @apply bg-[#EDF2F6] text-[#282828] dark:(bg-[#121212] text-[#ddd]);
-  
-  h1 + p {
-    @apply -mt-2 opacity-70 mb-4 text-2xl;
-  }
 
+  p {
+    @apply leading-relaxed;
+  }
   p + h2, ul + h2, table + h2 {
-    @apply mt-10;
+    @apply mt-8;
   }
 
   h1 {
@@ -14,15 +13,15 @@
   }
 
   h2 {
-    @apply text-3xl;
-  }
-
-  h3 {
     @apply text-2xl;
   }
 
-  h4 {
+  h3 {
     @apply text-xl;
+  }
+
+  h4 {
+    @apply text-lg;
   }
 
   h5 {
@@ -36,6 +35,54 @@
   h6:not(.opacity-100) {
     @apply opacity-40;
   }
+
+  .footnotes-sep {
+    @apply hidden;
+  }
+  .footnotes {
+    @apply absolute bottom-9 left-14 text-sm;
+  }
+
+  pre {
+    white-space: pre-wrap;
+  }
+}
+
+.slidev-layout.default {
+  h1 {
+    @apply text-4xl mb-4 -ml-[0.05em] border-[#4d555b] border-b pb-3 mb-8;
+  }
+
+  h2 {
+    @apply mb-2;
+  }
+  h2 + p {
+    @apply ml-8 mt-0;
+  }
+
+  ul {
+    @apply list-disc;
+    ul {
+      @apply list-circle;
+      ul {
+        @apply list-square;
+      }
+    }
+  }
+
+  ul :not(ul) {
+    @apply mb-3;
+  }
+
+  ol li {
+    @apply mb-2 ml-8;
+  }
+}
+
+.slidev-layout.terminal {
+  p {
+    @apply mb-5;
+  }
 }
 
 .slidev-layout.cover,
@@ -44,6 +91,10 @@
 
   h1 {
     @apply text-6xl leading-20 text-center;
+  }
+  
+  h1 + p {
+    @apply -mt-2 opacity-70 mb-4 text-2xl;
   }
 }
 
